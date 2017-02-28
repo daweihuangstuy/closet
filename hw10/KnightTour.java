@@ -9,18 +9,25 @@
   n=8   __s    over __ executions
   ======================================*/
 
-// TIP: from a *nix prompt, use
-// $ time java KnightTour 5
-// to measure execution time of 
-// $ java Knight 5
+/***
+ * USAGE:
+ * $ javac KnightTour.java
+ * $ java KnightTour
+ * $ java KnightTour [N]
+ *  
+ * (default N value: 8)
+ * 
+ * POSIX TIP: to measure execution time, use time program:
+ * $ time java KnightTour 5
+ ***/
 
 
 import java.io.*;
 import java.util.*;
 
 
-class TourFinder {
-
+class TourFinder 
+{
     //instance vars
     private int[][] board;
     private int sideLength; //board has dimensions n x n
@@ -49,7 +56,8 @@ class TourFinder {
     }//end constructor
 
 
-    public String toString() {
+    public String toString() 
+    {
 	//send ANSI code "ESC[0;0H" to place cursor in upper left
 	String retStr = "[0;0H";  
 	//emacs shortcut: C-q, then press ESC
@@ -67,11 +75,11 @@ class TourFinder {
 
 
     //helper method to keep try/catch clutter out of main flow
-    private void delay( int n ) {
+    private void delay( int n ) 
+    {
 	try {
 	    Thread.sleep(n);
-	}
-	catch( InterruptedException e ) {
+	} catch( InterruptedException e ) {
 	    System.exit(0);
 	}
     }
@@ -84,24 +92,26 @@ class TourFinder {
      * @param y      starting y-coord
      * @param moves  number of moves made so far
      *********************************************/
-    public void findTour( int x, int y, int moves ) {
-
+    public void findTour( int x, int y, int moves ) 
+    {
 	//delay(50); //slow it down enough to be followable
 
 	//if a tour has been completed, stop animation
 	if ( solved ) System.exit(0);
 
 	//primary base case: tour completed
-	if (  ) {
-	    
+	if ( /* YOUR KODE HERE */ ) {
+	    /* YOUR KODE HERE */
 	}
 	//other base case: stepped off board or onto visited cell
-	if (  ) {
-
+	if ( /* YOUR KODE HERE */ ) {
+	    /* YOUR KODE HERE */
 	}
 	//otherwise, mark current location
 	//and recursively generate tour possibilities from current pos
 	else {
+
+	    /* YOUR KODE HERE */
 
 	    //delay(1000); //uncomment to slow down enough to view
 
@@ -115,18 +125,21 @@ class TourFinder {
 	      . h . a .
 	      ======================================*/
 
+	    /* YOUR KODE HERE */
 
 	    //If made it this far, path did not lead to tour, so back up.
 
+	    /* YOUR KODE HERE */
 
 	    System.out.println( this ); //refresh screen
 	}
-    }
+    }//end findTour()
+
 }//end class TourFinder
 
 
-public class KnightTour {
-
+public class KnightTour 
+{
     public static void main( String[] args ) {
 
 	int n = 8;
@@ -154,6 +167,6 @@ public class KnightTour {
 	//for fixed starting location, use line below:
 	tf.findTour( 2, 2, 1 );
 
-    }
+    }//end main()
 
 }//end class KnightTour
