@@ -1,5 +1,5 @@
 /*****************************************************
- * class ItrWork -- skeleton
+ * class ItrWorkAL -- skeleton
  * Allows for familiarization with iterators
  *****************************************************/
 
