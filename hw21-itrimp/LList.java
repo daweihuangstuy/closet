@@ -267,7 +267,7 @@ public class LList<T> implements List<T>
 	}
 
 
-	//return last element returned by this iterator (from last next() call)
+	//remove last element returned by this iterator (from last next() call)
 	public void remove() 
 	{
 	    if ( ! _okToRemove )
